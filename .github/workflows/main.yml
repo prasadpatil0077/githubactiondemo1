@@ -1,0 +1,33 @@
+name: ETL pipline demo
+
+on:
+  push:
+    branches:
+    - main
+jobes:
+  extract-data:
+          runs-on: ubuntu-latest
+          step:
+            -name: checkout code
+            user: action/checkout@v2
+
+            -name: run extract.py
+            run: python extract.py
+
+  transform-data:
+            runs-on: ubuntu-latest
+            step:
+              -name: checkout code
+              user: action/checkout@v2
+
+              -name: run transform.py
+              run: python transform.py
+
+  load-data:
+            runs-on: ubuntu-latest
+            steps:
+              -name: checkout code
+              user: action/checkoutcode@v2
+
+              -name: run load.py
+              user: python load.py  
