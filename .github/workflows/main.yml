@@ -47,10 +47,10 @@ on:
     - main
 
 jobs:
-  myjob:
-  runs-on: ubantu-latest
+  extract-job:
+  runs-on: ubuntu-latest
   steps:
-    - name: checkout code
+    - name: Checkout code
       uses: action/checkout@v2
 
     - name: show python version
