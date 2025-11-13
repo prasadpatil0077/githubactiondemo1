@@ -1,4 +1,4 @@
-print("extract data from Mysql database")
+print("extract data from Mysql databases ")
 
 
 
